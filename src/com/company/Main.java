@@ -116,7 +116,7 @@ public class Main {
 
                 System.out.println();
                 System.out.println("Bye!");
-                return;
+                System.exit(0);
 
         }
 
