@@ -71,6 +71,8 @@ public class Main {
         System.out.println("Enter your PIN:");
         String pinInput = scanner.nextLine();
 
+        // Checking correctness of card number & PIN
+
         for (Card card : cards) {
 
             if (card.getCardNumber().equals(numberInput) && card.getPin().equals(pinInput)) {
