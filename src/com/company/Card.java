@@ -6,7 +6,7 @@ public class Card {
 
     private final String cardNumber;
     private final String pin;
-    private final long balance;
+    private final int balance;
 
     protected Card() {
 
@@ -79,7 +79,7 @@ public class Card {
         return pin;
     }
 
-    public long getBalance() {
+    public int getBalance() {
         return balance;
     }
 
