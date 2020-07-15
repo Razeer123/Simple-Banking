@@ -144,7 +144,7 @@ public class Main {
 
         // Connection string
 
-        String url = "jdbc:sqlite:/Users/michalderej/Desktop/Database/" + fileName;
+        String url = "jdbc:sqlite:" + fileName;
 
         try (Connection conn = DriverManager.getConnection(url)) {
             if (conn != null) {
@@ -160,7 +160,7 @@ public class Main {
 
         // Connection string
 
-        String url = "jdbc:sqlite:/Users/michalderej/Desktop/Database/" + fileName;
+        String url = "jdbc:sqlite:" + fileName;
 
         // Creating table
 

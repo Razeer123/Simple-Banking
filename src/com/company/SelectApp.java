@@ -12,7 +12,7 @@ public class SelectApp {
 
     private Connection connect () {
 
-        String url = "jdbc:sqlite:/Users/michalderej/Desktop/Database/" + fileName;
+        String url = "jdbc:sqlite:" + fileName;
         Connection conn = null;
 
         try {
