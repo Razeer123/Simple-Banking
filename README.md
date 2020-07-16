@@ -1,6 +1,6 @@
 # Simple Banking
 
-This is a simple Java project that I made as a JetBrains Academy assignment. It is my first ever app written in Java language. It simulates a simple banking system with the following features:
+This is a simple Java project that I made as a JetBrains Academy assignment. It is my first app written in Java language. It simulates a simple banking system with the following features:
 
  - Generate pseudorandom card number & PIN
  - Card number is checked using Luhn Algorithm
