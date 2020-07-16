@@ -5,15 +5,15 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class InsertApp {
+public class DeleteApp {
 
     private final String fileName;
 
-    protected InsertApp(String fileName) {
+    protected DeleteApp(String fileName) {
         this.fileName = fileName;
     }
 
-    private Connection connect () {
+    private Connection connect() {
 
         String url = "jdbc:sqlite:" + fileName;
         Connection conn = null;
@@ -28,24 +28,27 @@ public class InsertApp {
 
     }
 
-    public void insert (int id, long number, int pin, int balance) {
+    public void deleteRow(long cardNumber) {
 
-        String sql = "INSERT INTO card (id,number,pin,balance) VALUES(?,?,?,?)";
+        String sql = "DELETE FROM card WHERE number = ?";
 
         try (Connection conn = this.connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            // Setting parameters
+            // Setting parameter
 
-            pstmt.setInt(1, id);
-            pstmt.setLong(2, number);
-            pstmt.setInt(3, pin);
-            pstmt.setInt(4, balance);
+            pstmt.setLong(1,cardNumber);
+
+            // Executing the delete statement
+
             pstmt.executeUpdate();
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+
     }
+
+
 
 }

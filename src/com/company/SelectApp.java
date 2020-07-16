@@ -33,7 +33,7 @@ public class SelectApp {
         try (Connection conn = this.connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            // Setting the value
+            // Setting parameter
 
             pstmt.setLong(1, cardNumber);
             ResultSet rs = pstmt.executeQuery();
@@ -56,7 +56,7 @@ public class SelectApp {
         try (Connection conn = this.connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            // Setting the value
+            // Setting parameter
 
             pstmt.setLong(1, pinNumber);
             ResultSet rs = pstmt.executeQuery();
