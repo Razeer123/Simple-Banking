@@ -1,3 +1,10 @@
-# Simple-Banking
-This is a simple Java project from JetBrains Academy platform, that I'm currently working on. It consists of basic tools that are used to generate pseudorandom
-card details & PIN number and an option to "log-in" into account to display balance. Card number is checked using Luhn Algorithm. Users' data is stored in an SQL database. Program uses classes and methods to validate user details. This is my first project in Java. 
+# Simple Banking
+
+This is a simple Java project that I made as a JetBrains Academy assignment. It is my first ever app written in Java language. It simulates a simple banking system with the following features:
+
+ - Generate pseudorandom card number & PIN
+ - Card number is checked using Luhn Algorithm
+ - Option to log-in and delete an account (data is validated using different methods and classes)
+ - Option to add balance and perform a money transfer to different account
+
+All data is stored in an **SQL database**, so after rerunning the app user can still log into account that was created previously.
