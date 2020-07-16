@@ -28,19 +28,18 @@ public class InsertApp {
 
     }
 
-    public void insert (int id, long number, int pin, int balance) {
+    public void insert (long number, int pin, int balance) {
 
-        String sql = "INSERT INTO card (id,number,pin,balance) VALUES(?,?,?,?)";
+        String sql = "INSERT INTO card (number,pin,balance) VALUES(?,?,?)";
 
         try (Connection conn = this.connect();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             // Setting parameters
 
-            pstmt.setInt(1, id);
-            pstmt.setLong(2, number);
-            pstmt.setInt(3, pin);
-            pstmt.setInt(4, balance);
+            pstmt.setLong(1, number);
+            pstmt.setInt(2, pin);
+            pstmt.setInt(3, balance);
             pstmt.executeUpdate();
 
         } catch (SQLException e) {

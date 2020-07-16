@@ -5,15 +5,12 @@ import java.util.Scanner;
 
 public class Main {
 
-    static int counter = -1;
     static String fileName;
 
     public static void main(String[] args) {
 
         fileName = "cards.db";
         Scanner scanner = new Scanner(System.in);
-
-        // Variable counting card numbers -> have to improve that
 
         int choice = -1;
 
@@ -46,6 +43,13 @@ public class Main {
                 case 2:
 
                     logIn();
+                    break;
+
+                default:
+
+                    System.out.println();
+                    System.out.println("Unknown command");
+                    break;
 
             }
         }
@@ -64,13 +68,12 @@ public class Main {
 
     static void createAccount() {
 
-        counter++;
         InsertApp app = new InsertApp(fileName);
         Card account = new Card();
 
         // Inserting data into an SQL database
 
-        app.insert(counter, Long.parseLong(account.getCardNumber()), Integer.parseInt(account.getPin()),
+        app.insert(Long.parseLong(account.getCardNumber()), Integer.parseInt(account.getPin()),
                 account.getBalance());
 
         printData(account);
@@ -255,6 +258,12 @@ public class Main {
                 System.out.println("Bye!");
                 System.exit(0);
 
+            default:
+
+                System.out.println();
+                System.out.println("Unknown command");
+                break;
+
         }
 
         menu(cardNumber);
@@ -286,7 +295,7 @@ public class Main {
         // Creating table
 
         String sql = "CREATE TABLE IF NOT EXISTS card (" +
-                "  `id` INTEGER," +
+                "  `id` INTEGER NOT NULL PRIMARY KEY," +
                 "  `number` TEXT," +
                 "  `pin` TEXT," +
                 "  `balance` INTEGER DEFAULT 0"
