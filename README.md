@@ -1,6 +1,6 @@
 # Simple Banking
 
-This is a simple Java project that I made as a JetBrains Academy assignment. It is my first app written in Java language. Program simulates a simple banking system. Its purpose is to show possibilities of connecting Java app with an SQL database and checking correctness of user input in simple login / payment forms.
+This is a simple Java project that I made as a JetBrains Academy assignment. It is my first app written in Java language. Program simulates a simple banking system. Its purpose is to show possibilities of connecting Java app with an SQL database and checking correctness of user input in simple login / payment forms. This app was written entirely by me.
 
 # Features 🖥
 
